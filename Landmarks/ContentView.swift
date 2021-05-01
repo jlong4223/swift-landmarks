@@ -11,14 +11,14 @@ struct ContentView: View {
     var body: some View {
 //  using Vstack to vertically stack the text views
         VStack(alignment: .leading) {
-            Text("Turtle Rock")
+            Text("Hamilton Pool Preserve")
                 .font(.title)
                 .fontWeight(.bold)
             HStack {
-                Text("Joshua Tree National Park")
+                Text("Travis County Parks")
                     .font(.subheadline)
                 Spacer()
-                Text("California")
+                Text("Austin, TX")
                     .font(.subheadline)
             }
         }
