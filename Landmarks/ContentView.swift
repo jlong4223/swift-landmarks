@@ -9,10 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, Jared!")
-            .font(.title)
-            .fontWeight(.bold)
-            .padding()
+//  using Vstack to vertically stack the text views
+        VStack(alignment: .leading) {
+            Text("Turtle Rock")
+                .font(.title)
+                .fontWeight(.bold)
+            HStack {
+                Text("Joshua Tree National Park")
+                    .font(.subheadline)
+                Spacer()
+                Text("California")
+                    .font(.subheadline)
+            }
+        }
+        .padding()
     }
 }
 
