@@ -4,9 +4,12 @@ This is a mobile app that lists and provides landmark/park information. A user c
 
 ## Technologies Used:
 
+- Swift
 - SwiftUI
 - Xcode
 
 ## Screenshots:
 
-![landmark](./Landmarks/Assets.xcassets/landmark.imageset/landmark.png)
+<!-- ![landmark](./Landmarks/Assets.xcassets/landmark.imageset/landmark.png) -->
+
+<img src="./Landmarks/Assets.xcassets/landmark.imageset/landmark.png" style="height:280px;"/>
