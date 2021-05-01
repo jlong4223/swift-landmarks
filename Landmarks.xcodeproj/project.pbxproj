@@ -15,6 +15,9 @@
 		84A0D96B263CD59800F088A3 /* LandmarksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A0D96A263CD59800F088A3 /* LandmarksUITests.swift */; };
 		84A0D97C263CFF5E00F088A3 /* PoolImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A0D97B263CFF5E00F088A3 /* PoolImage.swift */; };
 		84A0D981263DD71F00F088A3 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A0D980263DD71F00F088A3 /* MapView.swift */; };
+		84A0D986263DEFC900F088A3 /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = 84A0D985263DEFC900F088A3 /* landmarkData.json */; };
+		84A0D98B263DF0CF00F088A3 /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A0D98A263DF0CF00F088A3 /* Landmark.swift */; };
+		84A0D990263DF40200F088A3 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A0D98F263DF40200F088A3 /* ModelData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		84A0D96C263CD59800F088A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84A0D97B263CFF5E00F088A3 /* PoolImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolImage.swift; sourceTree = "<group>"; };
 		84A0D980263DD71F00F088A3 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		84A0D985263DEFC900F088A3 /* landmarkData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = landmarkData.json; sourceTree = "<group>"; };
+		84A0D98A263DF0CF00F088A3 /* Landmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
+		84A0D98F263DF40200F088A3 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,9 @@
 				84A0D980263DD71F00F088A3 /* MapView.swift */,
 				84A0D951263CD59800F088A3 /* Assets.xcassets */,
 				84A0D956263CD59800F088A3 /* Info.plist */,
+				84A0D985263DEFC900F088A3 /* landmarkData.json */,
+				84A0D98A263DF0CF00F088A3 /* Landmark.swift */,
+				84A0D98F263DF40200F088A3 /* ModelData.swift */,
 				84A0D953263CD59800F088A3 /* Preview Content */,
 			);
 			path = Landmarks;
@@ -241,6 +250,7 @@
 			files = (
 				84A0D955263CD59800F088A3 /* Preview Assets.xcassets in Resources */,
 				84A0D952263CD59800F088A3 /* Assets.xcassets in Resources */,
+				84A0D986263DEFC900F088A3 /* landmarkData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +279,8 @@
 				84A0D981263DD71F00F088A3 /* MapView.swift in Sources */,
 				84A0D950263CD59700F088A3 /* ContentView.swift in Sources */,
 				84A0D94E263CD59700F088A3 /* LandmarksApp.swift in Sources */,
+				84A0D98B263DF0CF00F088A3 /* Landmark.swift in Sources */,
+				84A0D990263DF40200F088A3 /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
