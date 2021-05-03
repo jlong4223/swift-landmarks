@@ -10,10 +10,9 @@ import SwiftUI
 //this view is for creating the list of the already created rows
 struct LandmarkList: View {
     var body: some View {
-        List{
-            LandmarkRow(landmark: landmarksArray[0])
-            LandmarkRow(landmark: landmarksArray[1])
-            LandmarkRow(landmark: landmarksArray[2])
+//        dynamically creating a list of landmarks from the array and creating a row for each - basically looping the array
+        List(landmarksArray){ landmark in
+            LandmarkRow(landmark: landmark)
         }
     }
 }
