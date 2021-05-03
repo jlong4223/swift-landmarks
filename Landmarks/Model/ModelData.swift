@@ -8,7 +8,7 @@
 import Foundation
 
 // creating an array of landmarks by loading the json file
-var landmarks: [Landmark] = load("landmarkData.json")
+var landmarksArray: [Landmark] = load("landmarkData.json")
 
 // creating the load function that will handle the file passed into it, which is defined above
 func load<T: Decodable>(_ filename: String) -> T {
