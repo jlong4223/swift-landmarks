@@ -7,6 +7,8 @@ This is a mobile app that lists and provides landmark/park information. A user c
 - Swift
 - SwiftUI
 - Xcode
+- MapKit
+- CoreLocation
 
 ## Screenshots:
 
