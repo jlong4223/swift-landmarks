@@ -8,46 +8,49 @@
 import SwiftUI
 
 struct LandmarkDetail: View {
+    var landmark: Landmark
     var body: some View {
 //  using Vstack to vertically stack the text views
-        VStack{
+        ScrollView{
 //            rendering the other views by calling them within the vStack
-            MapView()
+            MapView(coordinate: landmark.locationCoordinate)
 //                adding ignores safe area allows the map to extend to the top
                 .ignoresSafeArea(edges: .top)
                 .frame(height: 300)
-            PoolImage()
+            PoolImage(image: landmark.image)
                 .offset(y: -120)
                 .padding(.bottom, -130)
             VStack(alignment: .leading) {
-                Text("Hamilton Pool Preserve")
+                Text(landmark.name)
                     .font(.title)
                     .fontWeight(.bold)
                 HStack {
-                    Text("Travis County Parks")
+                    Text(landmark.park)
                     Spacer()
-                    Text("Austin, TX")
+                    Text(landmark.state)
                 }
 //                the below styles are attached to the stack so they will apply to all elements in the stack
                 .font(.subheadline)
                 .foregroundColor(.secondary)
                 
                 Divider()
-                Text("About Hamilton Pool")
+                Text("About \(landmark.name)")
                     .font(.title2)
                 Spacer()
-                Text("Hamilton Pool Preserve is a natural pool that was created when the dome of an underground river collapsed due to massive erosion thousands of years ago. The pool is located about 23 miles west of Austin, Texas off Highway 71")
+                Text(landmark.description)
                 
-                Spacer()
+//                Spacer()
             }
             .padding()
-            
+            Spacer()
         }
+        .navigationTitle(landmark.name)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 struct LandmarkDetail_Previews: PreviewProvider {
     static var previews: some View {
-        LandmarkDetail()
+        LandmarkDetail(landmark: landmarksArray[0])
     }
 }

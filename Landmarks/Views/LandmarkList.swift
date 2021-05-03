@@ -15,7 +15,7 @@ struct LandmarkList: View {
 //        dynamically creating a list of landmarks from the array and creating a row for each - basically looping the array
             List(landmarksArray){ landmark in
 //                Creating a nav link for each landmark that renders the details 
-                NavigationLink(destination: LandmarkDetail()){
+                NavigationLink(destination: LandmarkDetail(landmark: landmark)){
                     LandmarkRow(landmark: landmark)
                 }
             }

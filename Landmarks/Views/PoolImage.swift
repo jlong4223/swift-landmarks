@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct PoolImage: View {
+    //creating a variable that is assigned to an Image
+    var image: Image
+
+    
     var body: some View {
-        Image("hamltonpool")
+//        whatever image is passed to the image var will recieve these styles
+        image
             .clipShape(Circle())
             .overlay(Circle().stroke(Color.white, lineWidth: 4))
             .shadow(radius: 7)
@@ -18,6 +23,6 @@ struct PoolImage: View {
 
 struct PoolImage_Previews: PreviewProvider {
     static var previews: some View {
-        PoolImage()
+        PoolImage(image: Image("icybay"))
     }
 }
