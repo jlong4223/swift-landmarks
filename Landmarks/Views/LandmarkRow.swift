@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//this view is for creating what each row is going to look like
 struct LandmarkRow: View {
 //    assigning a variable to the landmarks[Landmark] array created in the model
     var landmark: Landmark
