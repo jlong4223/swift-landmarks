@@ -7,7 +7,7 @@
 
 import Foundation
 
-// creating an array of landmarks by loading the json file
+// creating an array of landmarks by loading the json file and follows the model of Landmark which is defined in the Landmark.swift model
 var landmarksArray: [Landmark] = load("landmarkData.json")
 
 // creating the load function that will handle the file passed into it, which is defined above
