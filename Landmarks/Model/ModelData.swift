@@ -6,9 +6,15 @@
 //
 
 import Foundation
+import Combine
 
-// creating an array of landmarks by loading the json file and follows the model of Landmark which is defined in the Landmark.swift model
-var landmarksArray: [Landmark] = load("landmarkData.json")
+//combine allows the use of an observable object
+//swiftui observes this object and updates views based on changes
+final class ModelData: ObservableObject{
+    // creating an array of landmarks by loading the json file and follows the model of Landmark which is defined in the Landmark.swift model
+//    published allows users to see the changes- swift "publishes" the changes
+    @Published var landmarksArray: [Landmark] = load("landmarkData.json")
+}
 
 // creating the load function that will handle the file passed into it, which is defined above
 func load<T: Decodable>(_ filename: String) -> T {
