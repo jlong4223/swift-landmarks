@@ -9,11 +9,21 @@ import SwiftUI
 
 //this view is for creating the list of the already created rows
 struct LandmarkList: View {
+    @State private var showFavoritesOnly = false
+    
+//    creating filteredArray to show favs or not
+    var filteredLandmarks: [Landmark]{
+        landmarksArray.filter {landmark in
+            (!showFavoritesOnly || landmark.isFavorite)
+        }
+    }
+    
+    
     var body: some View {
         
         NavigationView{
-//        dynamically creating a list of landmarks from the array and creating a row for each - basically looping the array
-            List(landmarksArray){ landmark in
+//        dynamically creating a list of landmarks from the filtered array and creating a row for each - basically looping the array
+            List(filteredLandmarks){ landmark in
 //                Creating a nav link for each landmark that renders the details 
                 NavigationLink(destination: LandmarkDetail(landmark: landmark)){
                     LandmarkRow(landmark: landmark)

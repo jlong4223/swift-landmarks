@@ -182,7 +182,7 @@
         "state": "New Hampshire",
         "id": 1012,
         "isFeatured": false,
-        "isFavorite": false,
+        "isFavorite": true,
         "park": "Umbagog National Wildlife Refuge",
         "coordinates": {
             "longitude": -71.056816,
