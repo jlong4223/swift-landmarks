@@ -20,6 +20,11 @@ struct LandmarkRow: View {
             Text(landmark.name)
             
             Spacer()
+//            adding a star if its a favorite
+            if landmark.isFavorite {
+                           Image(systemName: "star.fill")
+                               .foregroundColor(.yellow)
+                       }
         }
     }
 }

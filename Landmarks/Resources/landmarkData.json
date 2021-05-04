@@ -5,8 +5,8 @@
         "city": "Austin",
         "state": "Texas",
         "id": 1001,
-        "isFeatured": false,
-        "isFavorite": false,
+        "isFeatured": true,
+        "isFavorite": true,
         "park": "Hamilton Pool Preserve",
         "coordinates": {
             "longitude": -98.12693,
