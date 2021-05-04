@@ -23,10 +23,17 @@ struct LandmarkList: View {
         
         NavigationView{
 //        dynamically creating a list of landmarks from the filtered array and creating a row for each - basically looping the array
-            List(filteredLandmarks){ landmark in
+            List{
+//                creates a toggle button to show and change favorites; the $ binds to the state variable
+                Toggle(isOn: $showFavoritesOnly){
+                    Text("Favorites only")
+                }
+                
+                ForEach(filteredLandmarks){ landmark in
 //                Creating a nav link for each landmark that renders the details 
                 NavigationLink(destination: LandmarkDetail(landmark: landmark)){
                     LandmarkRow(landmark: landmark)
+                    }
                 }
             }
             .navigationTitle("Landmarks")
