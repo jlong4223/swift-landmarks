@@ -15,9 +15,11 @@ struct PoolImage: View {
     var body: some View {
 //        whatever image is passed to the image var will recieve these styles
         image
+            .frame(width: 250)
             .clipShape(Circle())
             .overlay(Circle().stroke(Color.white, lineWidth: 4))
             .shadow(radius: 7)
+//        TODO change image size bc hamilton pool img size messes up text
     }
 }
 
