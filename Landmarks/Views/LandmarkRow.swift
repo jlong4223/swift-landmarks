@@ -30,6 +30,7 @@ struct LandmarkRow: View {
 }
 
 struct LandmarkRow_Previews: PreviewProvider {
+    static var landmarks = ModelData().landmarksArray
     static var previews: some View {
 //        group is a container for grouping view content
         Group{
