@@ -8,7 +8,13 @@
 import SwiftUI
 
 struct LandmarkDetail: View {
+    @EnvironmentObject var modelData: ModelData
     var landmark: Landmark
+    
+    var landmarkIndex: Int {
+            modelData.landmarksArray.firstIndex(where: { $0.id == landmark.id })!
+        }
+    
     var body: some View {
 //  using Vstack to vertically stack the text views
         ScrollView{
@@ -21,9 +27,13 @@ struct LandmarkDetail: View {
                 .offset(y: -120)
                 .padding(.bottom, -130)
             VStack(alignment: .leading) {
-                Text(landmark.name)
-                    .font(.title)
-                    .fontWeight(.bold)
+                HStack {
+//                    bringing in the button next to the landmark name - sets the favorite to whatever idx is being previewed
+                                    Text(landmark.name)
+                                        .font(.title)
+                                        .foregroundColor(.primary)
+                                    FavButton(isSet: $modelData.landmarksArray[landmarkIndex].isFavorite)
+                                }
                 HStack {
                     Text(landmark.park)
                     Spacer()
@@ -50,7 +60,10 @@ struct LandmarkDetail: View {
 }
 
 struct LandmarkDetail_Previews: PreviewProvider {
+    static let modelData = ModelData()
     static var previews: some View {
         LandmarkDetail(landmark: ModelData().landmarksArray[0])
+//            need access to the modelData again since its in an environment object
+            .environmentObject(modelData)
     }
 }
