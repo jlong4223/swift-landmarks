@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct Badge: View {
-    var badgeSymbols: some View{
-//        brought in the symbol and defines angle
-        RotatedBadgeSymbol(angle: Angle(degrees: 0))
-            .opacity(0.5)
-    }
+    static let rotationCount = 8
+//    brings in symbol and creates more symboles based on rotationCount and dynamically changes the angle of each
+    var badgeSymbols: some View {
+           ForEach(0..<Badge.rotationCount) { i in
+               RotatedBadgeSymbol(
+                   angle: .degrees(Double(i) / Double(Badge.rotationCount)) * 360.0
+               )
+           }
+           .opacity(0.5)
+       }
     
     var body: some View {
         ZStack{
@@ -25,6 +30,8 @@ struct Badge: View {
                 .position(x: geometry.size.width / 2.0, y: (3.0 / 4.0) * geometry.size.height)
             }
         }
+//        uses scaledToFit to move it within the background
+        .scaledToFit()
     }
 }
 
