@@ -5,6 +5,8 @@
 //  Created by Jared  Long on 5/13/21.
 //
 
+//this is the file that is for designing the badge icon (app logo)
+
 import SwiftUI
 
 struct BadgeBackground: View {
