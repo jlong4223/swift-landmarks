@@ -125,6 +125,7 @@
 			children = (
 				84A0D94D263CD59700F088A3 /* LandmarksApp.swift */,
 				84A0D994263E0E4100F088A3 /* Views */,
+				84EED357264F2A5A00944491 /* Badges */,
 				84A0D9B42644872A00F088A3 /* Helpers */,
 				84A0D951263CD59800F088A3 /* Assets.xcassets */,
 				84A0D956263CD59800F088A3 /* Info.plist */,
@@ -171,11 +172,6 @@
 				84A0D980263DD71F00F088A3 /* MapView.swift */,
 				84A0D97B263CFF5E00F088A3 /* PoolImage.swift */,
 				84A0D9AE2644852400F088A3 /* FavButton.swift */,
-				84EED33E264E021300944491 /* HexagonParameters.swift */,
-				84EED343264E041600944491 /* BadgeBackground.swift */,
-				84EED348264E203300944491 /* BadgeSymbol.swift */,
-				84EED34D264E22BB00944491 /* RotatedBadgeSymbol.swift */,
-				84EED352264F276D00944491 /* Badge.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -202,6 +198,18 @@
 			children = (
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		84EED357264F2A5A00944491 /* Badges */ = {
+			isa = PBXGroup;
+			children = (
+				84EED33E264E021300944491 /* HexagonParameters.swift */,
+				84EED343264E041600944491 /* BadgeBackground.swift */,
+				84EED348264E203300944491 /* BadgeSymbol.swift */,
+				84EED34D264E22BB00944491 /* RotatedBadgeSymbol.swift */,
+				84EED352264F276D00944491 /* Badge.swift */,
+			);
+			path = Badges;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
