@@ -15,28 +15,31 @@ struct BadgeBackground: View {
         Path { path in
             var width: CGFloat = min(geometry.size.width, geometry.size.height)
             let height = width
+            let xScale: CGFloat = 0.832
+            let xOffSet = (width * (1.0 - xScale)) / 2.0
+            width *= xScale
 //            move(to:) moves the drawing cursor within the bounds of a shape
             path.move(
                 to: CGPoint(
-                    x: width * 0.95,
+                    x: width * 0.95 + xOffSet,
                     y: height * ( 0.20 + HexagonParameters.adjustment)
                 )
             )
             HexagonParameters.segments.forEach{ segment in
                 path.addLine(
                     to: CGPoint(
-                        x: width * segment.line.x,
+                        x: width * segment.line.x + xOffSet,
                         y: height * segment.line.y
                     )
                 )
 //                using addQuadCurve to draw out better curves
                 path.addQuadCurve(
                     to: CGPoint(
-                        x: width * segment.curve.x,
+                        x: width * segment.curve.x + xOffSet,
                         y: height * segment.curve.y
                     ),
                     control: CGPoint(
-                        x: width * segment.control.x,
+                        x: width * segment.control.x + xOffSet,
                         y: height * segment.control.y
                     )
                 )
