@@ -14,6 +14,7 @@ final class ModelData: ObservableObject{
     // creating an array of landmarks by loading the json file and follows the model of Landmark which is defined in the Landmark.swift model
 //    published allows users to see the changes- swift "publishes" the changes
     @Published var landmarksArray: [Landmark] = load("landmarkData.json")
+    var hikesArray: [Hike] = load("hikeData.json")
 }
 
 // creating the load function that will handle the file passed into it, which is defined above
