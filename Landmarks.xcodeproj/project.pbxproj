@@ -169,9 +169,6 @@
 				84A0D9A1264072A300F088A3 /* LandmarkDetail.swift */,
 				84A0D997263F3EE000F088A3 /* LandmarkRow.swift */,
 				84A0D99C2640454500F088A3 /* LandmarkList.swift */,
-				84A0D980263DD71F00F088A3 /* MapView.swift */,
-				84A0D97B263CFF5E00F088A3 /* PoolImage.swift */,
-				84A0D9AE2644852400F088A3 /* FavButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -196,6 +193,9 @@
 		84A0D9B42644872A00F088A3 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				84A0D980263DD71F00F088A3 /* MapView.swift */,
+				84A0D97B263CFF5E00F088A3 /* PoolImage.swift */,
+				84A0D9AE2644852400F088A3 /* FavButton.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
