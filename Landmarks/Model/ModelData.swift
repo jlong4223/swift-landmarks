@@ -17,8 +17,15 @@ final class ModelData: ObservableObject{
     
 //    never going to modify the data from this file so do not need to use published
     var hikes: [Hike] = load("hikeData.json")
-}
 
+// using dictionary to store an unordered list of values, which come from the array
+    var categories: [String: [Landmark]]{
+        Dictionary(
+            grouping: landmarksArray,
+            by: {$0.category.rawValue}
+        )
+    }
+}
 // creating the load function that will handle the file passed into it, which is defined above
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data

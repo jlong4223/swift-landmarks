@@ -18,6 +18,15 @@ struct Landmark: Hashable, Codable, Identifiable{
     var description: String
     var isFavorite: Bool
     
+//    definining category for seperating how they are viewed
+// Category can contain more than strings if there were other types
+    var category: Category
+    enum Category: String, CaseIterable, Codable{
+        case lakes = "Lakes"
+        case rivers = "Rivers"
+        case mountains = "Mountains"
+    }
+    
 //    making private as it is not info that the user cares to see but is needed for the image to show
     private var imageName: String
     var image: Image{
