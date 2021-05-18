@@ -23,7 +23,7 @@ struct CategoryRow: View {
                 HStack(alignment: .top, spacing: 0){
 //                only looping through first 3 which comes from the prefix defined below
                     ForEach(items){landmark in
-                        Text(landmark.name)
+                        CategoryItem(landmark: landmark)
                     }
                 }
             }
