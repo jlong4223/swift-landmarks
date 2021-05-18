@@ -34,6 +34,7 @@
 		84EED37F264F750400944491 /* GraphCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EED37B264F750400944491 /* GraphCapsule.swift */; };
 		84EED380264F750400944491 /* HikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EED37C264F750400944491 /* HikeView.swift */; };
 		84EED38A26520FE200944491 /* CategoryHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EED38926520FE200944491 /* CategoryHome.swift */; };
+		84EED38F26534B1B00944491 /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EED38E26534B1B00944491 /* CategoryRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		84EED37B264F750400944491 /* GraphCapsule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphCapsule.swift; sourceTree = "<group>"; };
 		84EED37C264F750400944491 /* HikeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HikeView.swift; sourceTree = "<group>"; };
 		84EED38926520FE200944491 /* CategoryHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHome.swift; sourceTree = "<group>"; };
+		84EED38E26534B1B00944491 /* CategoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				84EED38926520FE200944491 /* CategoryHome.swift */,
+				84EED38E26534B1B00944491 /* CategoryRow.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84EED38F26534B1B00944491 /* CategoryRow.swift in Sources */,
 				84A0D97C263CFF5E00F088A3 /* PoolImage.swift in Sources */,
 				84EED38A26520FE200944491 /* CategoryHome.swift in Sources */,
 				84EED353264F276D00944491 /* Badge.swift in Sources */,
