@@ -17,6 +17,7 @@ struct Landmark: Hashable, Codable, Identifiable{
     var state: String
     var description: String
     var isFavorite: Bool
+    var isFeatured: Bool
     
 //    definining category for seperating how they are viewed
 // Category can contain more than strings if there were other types
