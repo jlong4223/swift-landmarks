@@ -15,6 +15,11 @@ final class ModelData: ObservableObject{
 //    published allows users to see the changes- swift "publishes" the changes
     @Published var landmarksArray: [Landmark] = load("landmarkData.json")
     
+    //    creating variable to contain only featured landmarks
+    var features: [Landmark] {
+            landmarksArray.filter { $0.isFeatured }
+        }
+    
 //    never going to modify the data from this file so do not need to use published
     var hikes: [Hike] = load("hikeData.json")
 
