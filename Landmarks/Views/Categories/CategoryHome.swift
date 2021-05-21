@@ -14,9 +14,19 @@ struct CategoryHome: View {
     var body: some View {
         NavigationView{
             List {
+//                showing the featured image on the top
+                modelData.features[0].image
+                    .resizable()
+                    .scaledToFill()
+                    .frame(height: 200)
+                    .clipped()
+//                    makes the photo the the width of the phone (edge to edge)
+                    .listRowInsets(EdgeInsets())
+                
                 ForEach(modelData.categories.keys.sorted(), id: \.self) { key in
-                    Text(key)
+                    CategoryRow(categoryName: key, items: modelData.categories[key]!)
                 }
+                .listRowInsets(EdgeInsets())
             }
             .navigationTitle("Featured")
         }
