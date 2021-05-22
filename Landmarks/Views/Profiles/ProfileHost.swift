@@ -11,8 +11,11 @@ struct ProfileHost: View {
     @State private var draftProfile = Profile.default
     
     var body: some View {
-//        using the backslash to insert swift code in the string - like a template literal in JS
-        Text("Profile for: \(draftProfile.username)")
+        VStack(alignment: .leading, spacing: 20) {
+//            passing the defined state var as a param to the profilesSummary
+                ProfilesSummary(profile: draftProfile)
+            }
+            .padding()
     }
 }
 
