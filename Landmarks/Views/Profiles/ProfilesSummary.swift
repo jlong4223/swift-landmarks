@@ -43,6 +43,15 @@ struct ProfilesSummary: View {
                         .padding(.bottom)
                     }
                 }
+                
+                Divider()
+
+                VStack(alignment: .leading) {
+                    Text("Recent Hikes")
+                        .font(.headline)
+
+                    HikeView(hike: modelData.hikes[0])
+                }
             }
         }
     }
@@ -52,5 +61,6 @@ struct ProfilesSummary_Previews: PreviewProvider {
     static var previews: some View {
 //        this view will use the default user defined in the model but when used within another view, a user param must be assigned to change user
         ProfilesSummary(profile: Profile.default)
+            .environmentObject(ModelData())
     }
 }
