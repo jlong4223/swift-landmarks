@@ -22,7 +22,8 @@ struct ProfileHost: View {
             if editMode?.wrappedValue == .inactive {
                             ProfilesSummary(profile: modellData.profile)
                         } else {
-                            Text("Profile Editor")
+//                            passing the draftProfile to the editor and showing view when edit clicked
+                            ProfileEditor(profile: $draftProfile)
                         }
                     }
                     .padding()
