@@ -15,6 +15,8 @@ final class ModelData: ObservableObject{
 //    published allows users to see the changes- swift "publishes" the changes
     @Published var landmarksArray: [Landmark] = load("landmarkData.json")
     
+    @Published var profile = Profile.default
+    
     //    creating variable to contain only featured landmarks
     var features: [Landmark] {
             landmarksArray.filter { $0.isFeatured }
