@@ -10,6 +10,7 @@ import SwiftUI
 struct CategoryHome: View {
 //    bringing in the environmental Object and attaching it to the view
     @EnvironmentObject var modelData: ModelData
+    @State private var showingProfile = false
     
     var body: some View {
         NavigationView{
@@ -28,7 +29,20 @@ struct CategoryHome: View {
                 }
                 .listRowInsets(EdgeInsets())
             }
+            .listStyle(InsetListStyle())
             .navigationTitle("Featured")
+//            adds a profile icon to the toolbar
+            .toolbar{
+                Button(action: {showingProfile.toggle()}){
+                    Image(systemName: "person.crop.circle")
+                        .accessibilityLabel("User Profile")
+                }
+            }
+//            this is what is presented when the button is toggled - the profileHost view
+            .sheet(isPresented: $showingProfile){
+                ProfileHost()
+                    .environmentObject(modelData)
+            }
         }
     }
 }
