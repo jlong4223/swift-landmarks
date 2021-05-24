@@ -15,6 +15,14 @@ struct ProfileHost: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             HStack{
+                if editMode?.wrappedValue == .active{
+//                    adding a cancel button to disregard all changes made
+                    Button("Cancel"){
+                        draftProfile = modellData.profile
+                        editMode?.animation().wrappedValue = .inactive
+                    }
+                }
+                
                 Spacer()
                 EditButton()
             }
@@ -24,6 +32,13 @@ struct ProfileHost: View {
                         } else {
 //                            passing the draftProfile to the editor and showing view when edit clicked
                             ProfileEditor(profile: $draftProfile)
+//                                appear and disapeear allows the view to udpdate in real time
+                                .onAppear {
+                                    draftProfile = modellData.profile
+                            }
+                                .onDisappear {
+                                    modellData.profile = draftProfile
+                            }
                         }
                     }
                     .padding()
