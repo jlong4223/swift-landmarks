@@ -8,19 +8,30 @@
 import SwiftUI
 
 struct ProfileHost: View {
+    @Environment(\.editMode) var editMode
+    @EnvironmentObject var modellData: ModelData
     @State private var draftProfile = Profile.default
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-//            passing the defined state var as a param to the profilesSummary
-                ProfilesSummary(profile: draftProfile)
+            HStack{
+                Spacer()
+                EditButton()
             }
-            .padding()
+            
+            if editMode?.wrappedValue == .inactive {
+                            ProfilesSummary(profile: modellData.profile)
+                        } else {
+                            Text("Profile Editor")
+                        }
+                    }
+                    .padding()
     }
 }
 
 struct ProfileHost_Previews: PreviewProvider {
     static var previews: some View {
         ProfileHost()
+            .environmentObject(ModelData())
     }
 }
