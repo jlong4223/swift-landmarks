@@ -16,7 +16,9 @@ struct PageView<Page: View>: View  {
 //        using $ creates a binding to a value that is stored as state
         VStack {
             PageViewController(pages: pages, currentPage: $currentPage)
-                Text("Current Page: \(currentPage)")
+            PageControl(numberOfPages: pages.count, currentPage: $currentPage)
+                            .frame(width: CGFloat(pages.count * 18))
+                            .padding(.trailing)
         }
     }
 }
