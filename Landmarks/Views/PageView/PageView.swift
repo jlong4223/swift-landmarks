@@ -10,9 +10,14 @@ import SwiftUI
 //this is a custom view that brings in the pageViewController view as the child view
 struct PageView<Page: View>: View  {
     var pages: [Page]
+    @State private var currentPage = 0
     
     var body: some View {
-        PageViewController(pages: pages)
+//        using $ creates a binding to a value that is stored as state
+        VStack {
+            PageViewController(pages: pages, currentPage: $currentPage)
+                Text("Current Page: \(currentPage)")
+        }
     }
 }
 
